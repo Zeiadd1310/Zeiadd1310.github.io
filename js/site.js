@@ -175,9 +175,26 @@
             'modal.f20': 'Tailored to Your Needs',
             'ui.themeLight': 'Switch to light mode',
             'ui.themeDark': 'Switch to dark mode',
-            'ui.langSwitch': 'Switch language'
+            'ui.langSwitch': 'Switch language',
+            'skills.tech.desc': 'Specialized in Flutter & Dart for cross-platform mobile development, applying clean architecture patterns, state management, and seamless backend integration.',
+            'skills.soft.desc': 'Excellent collaboration and communication skills, working effectively in agile teams. Strong problem-solving abilities with analytical thinking and proven time management.',
+            'skills.tools.desc': 'Proficient with industry-standard development tools for building, debugging, version control, and designing high-quality mobile applications.',
+            'skills.lang.desc': 'Able to communicate and collaborate effectively in both Arabic and English across professional and technical environments.',
+            'test.title': 'Testimonials',
+'test.sub': 'What colleagues and mentors say about working with me.',
+'test.1.text': 'It was a great teamwork experience, and Zeiad was supportive, professional, and easy to collaborate with throughout the project.',
+'test.1.name': 'Moustafa Mahmoud Eid',
+'test.1.role': 'Backend ASP.NET Developer · MoveOn Project',
+'nav.testimonials': 'Testimonials',
+'contact.waLink': 'https://wa.me/201026735776?text=Hi%20Zeiad%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20get%20in%20touch!',
+
         },
         ar: {
+            'contact.waLink': 'https://wa.me/201026735776?text=مرحباً%20زياد%2C%20رأيت%20موقعك%20وأود%20التواصل%20معك!',
+            'skills.tech.desc': 'متخصص في فلاتر ودارت لتطوير تطبيقات الموبايل متعددة المنصات، مع تطبيق أنماط الهندسة النظيفة وإدارة الحالة والتكامل مع الخلفية.',
+            'skills.soft.desc': 'مهارات تعاون وتواصل ممتازة، أعمل بفاعلية في فرق أجايل، مع قدرات قوية في حل المشكلات والتفكير التحليلي وإدارة الوقت.',
+            'skills.tools.desc': 'إتقان أدوات التطوير المعيارية للبناء والتنقيح والتحكم في الإصدارات وتصميم تطبيقات موبايل عالية الجودة.',
+            'skills.lang.desc': 'القدرة على التواصل والتعاون باحترافية باللغتين العربية والإنجليزية في البيئات المهنية والتقنية.',
             'meta.title': 'زياد رمضان | مطور فلاتر',
             'hero.name': 'زياد<br><span class="accent-word">رمضان</span>',
             'nav.home': 'الرئيسية',
@@ -347,7 +364,13 @@
             'modal.f20': 'حسب احتياجاتك',
             'ui.themeLight': 'التبديل إلى الوضع الفاتح',
             'ui.themeDark': 'التبديل إلى الوضع الداكن',
-            'ui.langSwitch': 'تغيير اللغة'
+            'ui.langSwitch': 'تغيير اللغة',
+            'test.title': 'آراء الزملاء',
+'test.sub': 'ما يقوله الزملاء والمدربون عن العمل معي.',
+'test.1.text': 'كانت تجربة عمل جماعي رائعة، وكان زياد داعماً ومحترفاً وسهل التعاون معه طوال المشروع.',
+'test.1.name': 'مصطفى محمود عيد',
+'test.1.role': 'مطور ASP.NET خلفية · مشروع MoveOn',
+'nav.testimonials': 'آراء الزملاء',
         }
     };
 
@@ -373,6 +396,9 @@
     }
 
     function applyLanguage(lang) {
+
+        const waLink = document.getElementById('waLink');
+if (waLink) waLink.href = t['contact.waLink'];
         const t = translations[lang] || translations.en;
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
