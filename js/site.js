@@ -396,10 +396,10 @@
     }
 
     function applyLanguage(lang) {
+        const t = translations[lang] || translations.en;
 
         const waLink = document.getElementById('waLink');
-if (waLink) waLink.href = t['contact.waLink'];
-        const t = translations[lang] || translations.en;
+        if (waLink) waLink.href = t['contact.waLink'];
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
         localStorage.setItem(STORAGE_LANG, lang);
